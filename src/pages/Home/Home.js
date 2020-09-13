@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, ScrollView, Button } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import Main from '../../Layout/Main';
 
@@ -17,11 +17,13 @@ export default function HomePage({ navigation }) {
     console.info(JSON.parse(request));
   }
 
-  useEffect(() => {
-    testeSegundo();
-  }, []);
+  useEffect(() => { testeSegundo(); }, []);
 
   return (
-    <Main navigation={navigation} content={ <Text>Home Page</Text>} />
+    <Main navigation={navigation} content={
+      <ScrollView>
+        <Text>Home Page</Text>
+      </ScrollView>
+    } />
   );
 }

@@ -15,7 +15,6 @@ export default function HomePage({ content, navigation }) {
   );
 }
 
-
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
